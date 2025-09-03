@@ -87,6 +87,7 @@ time = []
 
 [dependencies]
 tokio-macros = { version = "~2.2.0", path = "../tokio-macros", optional = true }
+wasmedge_wasi_socket = "0.5"
 
 pin-project-lite = "0.2.11"
 
@@ -136,7 +137,6 @@ features = ["Win32_Foundation", "Win32_Security_Authorization"]
 
 [target.'cfg(all(target_os = "wasi", tokio_unstable))'.dependencies]
 libc = { version = "0.2.149", optional = true }
-wasmedge_wasi_socket = "0.5"
 socket2 = { version = "0.5.5", optional = true, features = [
   "all",
 ], git = "https://github.com/second-state/socket2.git", branch = "v0.5.x" }
